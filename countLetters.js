@@ -12,7 +12,7 @@ const countLetters = function(string) {
     // letter = 'a'
     if (letter !== " ") {
       if (result[letter]) {
-        result[letter] = result[letter] + 1
+        result[letter] += 1
       } else {
         result[letter] = 1
       }
@@ -25,8 +25,14 @@ console.log(countLetters("Weather"))
 
 console.log(countLetters("Lighthouse Lab"))
 
+const result1 = countLetters("ABC")
+
+assertEqual(result1["A"], 1)
+
+/** 
 const a = {};
 
 a['animal'] = 'dog';
 
 console.log(a)
+*/
