@@ -25,4 +25,24 @@ function eqArrays(arr1, arr2) {
   return true;
 };
 
-eqArrays()
+const assertArraysEqual = function(arr1, arr2) {
+  if (eqArrays(arr1, arr2)) {
+    console.log(`\u2705\u2705\u2705 Assertion Passed: ${arr1} === ${arr2}`);
+  } else {
+    console.log(`\u274C\u274C\u274C Assertion Failed: ${arr1} !== ${arr2}`);
+  }
+};
+
+const arr1 = [1, 2, 3, 4, 5, 6];
+const arr2 = ["take", "me", "to", "hhsuh"];
+const arr3 = ["turn", "around"];
+
+
+assertArraysEqual(map(arr1, x => x*2), [2, 4, 6, 8, 10, 12]); 
+assertArraysEqual(map(arr2, word => word[1]), ["a", "e", "o", "h"]);
+
+assertArraysEqual(map(arr3, word => word[0]), ["t", "o", "h"]);
+
+
+
+
