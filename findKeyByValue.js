@@ -23,3 +23,13 @@ const bestTVShowsByGenre = {
 
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+
+const neighbourhood = {
+  Peter: 18,
+  Suzy: 28,
+  Bill: 89,
+  Lily: 28
+};
+
+assertEqual(findKeyByValue(neighbourhood, 89));
+
