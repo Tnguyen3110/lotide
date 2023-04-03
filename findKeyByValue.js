@@ -31,5 +31,5 @@ const neighbourhood = {
   Lily: 28
 };
 
-assertEqual(findKeyByValue(neighbourhood, 89));
+assertEqual(findKeyByValue(neighbourhood, 89), "Bill");
 
