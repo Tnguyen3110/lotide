@@ -20,17 +20,20 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 function flatten(array) {
-  let flattened = []
+  let flattened = [];
   for (let i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
       for (let item of array[i]) {
-        flattened.push(item)
+        flattened.push(item);
       }
-    } 
+    }
     else {
-      flattened.push(array[i])
+      flattened.push(array[i]);
     }
   }
-  return flattened
+  return flattened;
 }
-console.log(flatten([[1, 2], 3, [4, 5], [9, 10, 12]]))
+console.log(flatten([[1, 2], 3, [4, 5], [9, 10, 12]]));
+
+
+assertArraysEqual(flatten([[1, 2], 3, [4, 5], [9, 10, 12]]), [1, 2, 3, 4, 5, 9, 10, 12]);
