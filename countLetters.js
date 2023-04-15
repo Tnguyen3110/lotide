@@ -7,25 +7,27 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(string) {
+  //initiate an empty object to store the result
   const result = {}; // a: 1
   for (const letter of string) {
-    // letter = 'a'
     if (letter !== " ") {
+      //if the object already has letter, add 1 more time
       if (result[letter]) {
-        result[letter] += 1
+        result[letter] += 1;
+        //if object does not have letter, add 1
       } else {
-        result[letter] = 1
+        result[letter] = 1;
       }
     }
   }
-  return result
-}
+  return result;
+};
 
-console.log(countLetters("Weather"))
+console.log(countLetters("Weather"));
 
-console.log(countLetters("Lighthouse Lab"))
+console.log(countLetters("Lighthouse Lab"));
 
-const result1 = countLetters("ABC")
+const result1 = countLetters("ABC");
 
 assertEqual(result1["A"], 1)
 

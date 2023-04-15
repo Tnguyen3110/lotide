@@ -1,16 +1,19 @@
 const takeUntil = function(array, callback) {
-  let result = []
+  let result = [];
   for (item of array) {
-    let value = callback(item)
+    //run callback on each item
+    let value = callback(item);
+    //take the falsy values
     if (!value) {
-      result.push(item)
-    } 
+      result.push(item);
+    }
+    //stop taking if the value is true
     else {
       return result;
     }
   }
-  return result
-}
+  return result;
+};
 
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
@@ -44,7 +47,7 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const data3 = [1, 3, 5, 7, 8];
 
-assertArraysEqual(takeUntil(data2, x => x === ','), [ "I've", 'been', 'to', 'Hollywood' ]);
+assertArraysEqual(takeUntil(data2, x => x === ','), ["I've", 'been', 'to', 'Hollywood']);
 
 assertArraysEqual(takeUntil(data3, x => x > 3), [1, 3]);
 

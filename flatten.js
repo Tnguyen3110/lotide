@@ -22,11 +22,13 @@ const assertArraysEqual = function(arr1, arr2) {
 function flatten(array) {
   let flattened = [];
   for (let i = 0; i < array.length; i++) {
+    //check if an element is an array, then add each element of its array into the flattened array
     if (Array.isArray(array[i])) {
       for (let item of array[i]) {
         flattened.push(item);
       }
     }
+    //otherwise add directly into flattened array
     else {
       flattened.push(array[i]);
     }
